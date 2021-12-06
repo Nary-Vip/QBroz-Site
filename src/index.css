@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+.btn{
+  @apply shadow-md py-3 px-6 rounded-md transition duration-300
+}
+
+.btn-2{
+  @apply bg-purple-800 text-white
+}
+
+.btn-3{
+  @apply bg-white text-black
+}

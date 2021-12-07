@@ -4,12 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "neon-green": "#39FF14"
+        "neon-green": "#39FF14",
+        "neon-red": "#F72119",
+        "neon-pink": "	#FF10F0",
+        "neon-purple": "#DF00FE",
+        "neon-dark-purple": "#BE00FE"
       }
     },
     container: {
       center: true,
-      padding: "1rem",
+      padding: "10px",
       screens: {
         lg: "1124px",
         xl:"1124px",
@@ -17,7 +21,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      Poppins: ["Poppins, sans-serif"]
+      Poppins: ["Poppins, sans-serif"],
+      pacifo: ["Sanchez, serif"]
     }
   },
   variants: {

@@ -1,15 +1,29 @@
 import './App.css';
+import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import Navbar from './components/Navbar';
-import Services from './components/Services';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import About from './components/About';
 
 function App() {
   return (
-    <div className="relative flex flex-col min-h-screen">
-      <Navbar/>
-      <LandingPage/>
-      <Services/>
-    </div>
+    <Router>
+      <div className="relative flex flex-col min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />}/>
+
+          <Route path="/about" element={<About/>}/>
+        
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

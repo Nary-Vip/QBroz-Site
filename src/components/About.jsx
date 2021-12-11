@@ -1,15 +1,60 @@
 import React from 'react'
+// import aboutPic from "../Images/about.jpg";
+// import corPic from "../Images/coro.jpg";
+import Swiper from 'swiper';
+import 'swiper/swiper.scss';
+
+// eslint-disable-next-line no-unused-vars
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
 
 const About = () => {
     return (
-        <div className="h-screen">
-            <div className="bg-gray-200 h-2/4">
+        <>
+            <div className="h-screen bg-gray-100">
+                <Swiper>
+                    {/* <!-- Slider main container --> */}
+                    <div className="swiper">
+                        {/* <!-- Additional required wrapper --> */}
+                        <div className="swiper-wrapper">
+                            {/* <!-- Slides --> */}
+                            <div className="swiper-slide">Slide 1</div>
+                            <div className="swiper-slide">Slide 2</div>
+                            <div className="swiper-slide">Slide 3</div>
+                            ...
+                        </div>
+                        {/* <!-- If we need pagination --> */}
+                        <div className="swiper-pagination"></div>
 
-            </div>
-            <div className="h-2/4 bg-neon-pink">
+                        {/* <!-- If we need navigation buttons --> */}
+                        <div className="swiper-button-prev"></div>
+                        <div className="swiper-button-next"></div>
 
+                        {/* <!-- If we need scrollbar --> */}
+                        <div className="swiper-scrollbar"></div>
+                    </div>
+                </Swiper>
             </div>
-        </div>
+
+        </>
 
     )
 }

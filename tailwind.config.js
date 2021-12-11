@@ -8,12 +8,13 @@ module.exports = {
         "neon-red": "#F72119",
         "neon-pink": "	#FF10F0",
         "neon-purple": "#DF00FE",
-        "neon-dark-purple": "#BE00FE"
+        "neon-dark-purple": "#BE00FE",
+        "wpink": "rgba(255,204,226,1)"
       }
     },
     container: {
       center: true,
-      padding: "10px",
+      padding: "20px",
       screens: {
         lg: "1124px",
         xl:"1124px",
@@ -22,7 +23,8 @@ module.exports = {
     },
     fontFamily: {
       Poppins: ["Poppins, sans-serif"],
-      pacifo: ["Sanchez, serif"]
+      pacifo: ["Sanchez, serif"],
+      balo: ["'Baloo Bhaijaan 2', cursive"]
     }
   },
   variants: {

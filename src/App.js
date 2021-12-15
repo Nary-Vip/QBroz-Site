@@ -11,6 +11,7 @@ import {
 import About from './components/About';
 import PageNotFound from './components/PageNotFound';
 import { ThemeContext } from './context/Context';
+import ContactUs from './components/ContactUs';
 
 
 
@@ -37,8 +38,10 @@ function App() {
 
           <Route exact path="/about" element={<About/>}/>
 
+          <Route path="/contactus" element={<ContactUs/>}/>
+
           <Route path="*" element={<PageNotFound/>} />
-        
+
         </Routes>
         <Footer />
       </div>

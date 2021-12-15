@@ -33,10 +33,10 @@ const Navbar = () => {
                             <button onClick={switchThemeToDark}>Dark</button>
                         </div>
                     </div>
-                    <a href="#contactus" className="py-3 text-white uppercase transition duration-300 rounded-md bg-neon-green px-7 hover:bg-green-400">Contact US</a>
+                    <Link to="contactus" className="py-3 text-white uppercase transition duration-300 rounded-md bg-neon-green px-7 hover:bg-green-400">Contact US</Link>
                 </ul>
                 <div className="flex justify-end flex-1 sm:hidden">
-                    <HiMenu className="text-3xl" />
+                    <HiMenu className="text-3xl cursor-pointer" />
                 </div>
             </div>
         </>

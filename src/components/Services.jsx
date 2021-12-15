@@ -59,7 +59,7 @@ const Services = () => {
                             <h1 style={desText2} className="mb-10 text-3xl text-ECDBBA">Technical Writing &#38; Publications </h1>
                             <p className="my-4 text-center text-gray-400 lg:text-left md:text-center md:w-full sm:w-3/4">
                                 Be it assistance in Design works or academic related query.
-                                By outsourcing your design and paper publishing work to us, you can focus on what you do best : running your business.
+                                By outsourcing your design and paper publishing work to us, you can focus on what you do best running your business.
                             </p>
                         </div>
                         {/* Image design */}

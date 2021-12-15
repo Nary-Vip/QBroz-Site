@@ -25,13 +25,18 @@ html{
 }
 
 .btn{
-  @apply shadow-md py-3 px-6 rounded-md transition duration-300
+  @apply shadow-md py-3 px-6 rounded-md transition duration-300 
 }
 
 .btn-2{
-  @apply bg-neon-purple text-white
+  @apply text-white
 }
 
 .btn-3{
   @apply bg-white text-black
 }
+
+.btn-wa{
+  @apply bg-green-600 text-white text-xl hover:bg-green-500
+}
+

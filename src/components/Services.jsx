@@ -1,18 +1,23 @@
 import React, { useContext } from 'react'
-import services1 from "../Images/services1.png";
+import services1 from "../Images/img3.jpeg";
 import services from "../Images/services.png";
 import { ThemeContext } from '../context/Context';
 
 const Services = () => {
 
     const { theme } = useContext(ThemeContext);
-    let style;
+    let style, desColor2, desText2;
 
     if (theme === "dark") {
-        style = { background: "black", color: "white" };
+        style = { background: "linear-gradient(168deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 0%, rgba(34,34,34,0.8970938717283788) 69%)", color: "white" };
+        desColor2 = { background: "#ECDBBA"};
+        desText2 = { color: "#ECDBBA"}
     }
     else if (theme === "light") {
-        style = { background: "white", color: "black" };
+        style = { color: "black" };
+        desColor2 = { background: "#FF10F0"};
+        desText2 = { color: "#FF10F0"}
+        
     }
 
     return (
@@ -34,7 +39,7 @@ const Services = () => {
                     {/* Content */}
                     <div className="flex flex-col flex-1 text-center lg:items-start">
                         <h1 className="mb-10 text-3xl text-neon-green">Design Services</h1>
-                        <p className="my-4 text-center text-gray-400 lg:text-left sm:w-3/4">Blogs, Brochure, Banners, E book cover,
+                        <p className="my-4 text-center text-gray-400 lg:text-left md:text-center md:w-full sm:w-3/4">Blogs, Brochure, Banners, E book cover,
                             Instagram Posts, Facebook posts, Product packaging, Billboard, Kiosk, Leaflets</p>
                     </div>
                     {/* Image design */}
@@ -47,16 +52,18 @@ const Services = () => {
                     <div className="container flex flex-col items-center justify-center lg:flex-row-reverse gap-x-24">
                         {/* IMage */}
                         <div className="z-10 flex justify-center flex-1 mb-10 lg:mb-0">
-                            <img className="w-5/6 ml-10 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src={services1} alt="Cover PIC" />
+                            <img className="w-3/4 ml-0 border-2 border-black rounded-md lg:ml-20 h-3/4 lg:w-3/6 lg:h-3/6 md:w-full md:h-full" src={services1} alt="Cover PIC" />
                         </div>
                         {/* Content */}
                         <div className="flex flex-col flex-1 text-center lg:items-start">
-                            <h1 className="mb-10 text-3xl text-neon-pink">Technical Writing &#38; Publications </h1>
-                            <p className="my-4 text-center text-gray-400 lg:text-left sm:w-3/4">Technical Writing &#38; Publications
+                            <h1 style={desText2} className="mb-10 text-3xl text-ECDBBA">Technical Writing &#38; Publications </h1>
+                            <p className="my-4 text-center text-gray-400 lg:text-left md:text-center md:w-full sm:w-3/4">
+                                Be it assistance in Design works or academic related query.
+                                By outsourcing your design and paper publishing work to us, you can focus on what you do best : running your business.
                             </p>
                         </div>
                         {/* Image design */}
-                        <div className="absolute right-0 hidden w-2/4 overflow-hidden rounded-l-full bg-neon-pink lg:right-0 lg:top-20 h-80 lg:block hover:transform">
+                        <div style= {desColor2} className="absolute right-0 hidden w-2/4 overflow-hidden rounded-l-full lg:right-0 lg:top-20 h-80 lg:block hover:transform">
                         </div>
                     </div>
                 </div>

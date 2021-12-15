@@ -11,10 +11,10 @@ const Footer = () => {
     let style;
 
     if (theme === "dark") {
-        style = { background: "black", color: "white" };
+        style = { background: "linear-gradient(168deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 0%, rgba(42,36,36,0.8970938717283788) 61%", color: "white" };
     }
     else if (theme === "light") {
-        style = { background: "white", color: "black" };
+        style = { color: "black" };
     }
 
     return (
@@ -24,7 +24,7 @@ const Footer = () => {
                     <img className="w-1/6 rounded-full h-1/6"  src={compIcon} alt="Icon"></img>
                     <Link to="/"><h2 className="text-3xl font-pacifo">Qbroz</h2></Link>
                 </div>
-                <div className="px-10 text-xl font-bold text-gray-600 lg:mt-0 sm:mt-10">
+                <div className="px-10 mt-10 text-xl font-bold md:mt-0 lg:mt-0">
                     Connect with US
                 </div>
                 <ul className="flex gap-10 mt-12 md:mt-0">

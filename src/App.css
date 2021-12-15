@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App-logo {
@@ -71,7 +73,7 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  box-shadow: 0px 8px 6px 0px #FFF01F;
+  box-shadow: 0px 2px 2px 0px #FFF01F;
   z-index: 1;
   border-radius: 2rem;
 }
@@ -86,9 +88,34 @@
 
 .dropdown-content button:hover {
   background-color: #ddd;
-
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+/* Navbar name animation */
+
+.navName{
+  color: #ffffff;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s infinite linear;
+  animation-fill-mode: forwards;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+@keyframes shine{
+  0%{
+    background-position: 0;
+  }
+  60%{
+    background-position: 180px;
+  }
+  100%{
+    background-position: 180px;
+  }
+  }

@@ -21,10 +21,10 @@ function App() {
   let style;
 
     if (theme === "dark") {
-        style = { background: "black", color: "white" };
+        style = { background: "#171717", color: "#dfd8fd" };
     }
     else if (theme === "light") {
-        style = { background: "white", color: "black" };
+        style = { background: "white", color: "#666565" };
     }
 
   return (

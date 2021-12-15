@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
 import { HiMenu } from "react-icons/hi";
-import navIcon from "../Images/qbroz.ico";
+import navIcon from "../Images/qbroz1.png";
 import { Link } from "react-router-dom";
 import { ThemeContext } from '../context/Context';
-
 
 const Navbar = () => {
     const { setTheme } = useContext(ThemeContext);
@@ -16,14 +15,17 @@ const Navbar = () => {
     }
     return (
         <>
-            <div className="container flex items-center py-2 mt-4 sm:mt-12">
+            <div className="container flex items-center py-4 mt-4 sm:mt-4">
                 <div>
-                    <img className="w-1/6 rounded-full h-1/6" src={navIcon} alt="Icon"></img>
+                    <Link to="/"><img className="w-5/6 rounded-full h-5/6" src={navIcon} alt="Icon"></img></Link>
+                    
                     {/* <FcGlobe className="text-3xl"/> */}
+                </div>
+                <div className="navName">
+                    <span className='text-3xl'>Q</span>broz
                 </div>
                 <ul className="items-center justify-end flex-1 hidden gap-12 text-xs text-blue-400 uppercase sm:flex">
                     <li className="cursor-pointer"><Link to="/about">About</Link></li>
-                    <li className="cursor-pointer"><a href="#services">Services</a></li>
                     <div className="dropdown">
                         <button className="uppercase">Theme</button>
                         <div className="dropdown-content">

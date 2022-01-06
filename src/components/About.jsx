@@ -25,8 +25,8 @@ const About = () => {
                 <div className='flex flex-col-reverse items-center justify-center gap-12 lg:flex-row mt-14 lg:mt-18'>
                     
                     <div className='p-5'>
-                        <h2 className='px-10 text-2xl text-center lg:text-left'>Who we are</h2>
-                        <p className='p-10 text-gray-500 text-l'>
+                        <h2 className='px-10 text-2xl text-center lg:text-left font-bioRhyme'>Who we are</h2>
+                        <p className='p-10 text-gray-500 font-mont text-l'>
                             We are a team of professionals with expertise in publishing and designing. Our team is equipped with the necessary knowledge and technical skills to deliver a diverse range of projects irrespective of their size. Our strength lies in quality, professionalism, experience and affordability. 
                             <br/>Our squad is comprised of Academicians, Research Scholars and Industry Professionals.
                         </p>

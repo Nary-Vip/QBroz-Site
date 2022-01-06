@@ -119,3 +119,8 @@
     background-position: 180px;
   }
   }
+
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }

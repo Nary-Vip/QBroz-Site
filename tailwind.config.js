@@ -35,7 +35,9 @@ module.exports = {
     fontFamily: {
       Poppins: ["Poppins, sans-serif"],
       pacifo: ["Sanchez, serif"],
-      balo: ["'Baloo Bhaijaan 2', cursive"]
+      balo: ["'Baloo Bhaijaan 2', cursive"],
+      bioRhyme: ["'BioRhyme', serif"],
+      mont: ["'Montserrat', sans-serif"]
     }
   },
   variants: {

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import services1 from "../Images/img3.jpeg";
 import services from "../Images/services.png";
 import { ThemeContext } from '../context/Context';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
 
@@ -10,14 +11,14 @@ const Services = () => {
 
     if (theme === "dark") {
         style = { background: "linear-gradient(168deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 0%, rgba(34,34,34,0.8970938717283788) 69%)", color: "white" };
-        desColor2 = { background: "#ECDBBA"};
-        desText2 = { color: "#ECDBBA"}
+        desColor2 = { background: "#ECDBBA" };
+        desText2 = { color: "#ECDBBA" }
     }
     else if (theme === "light") {
         style = { color: "black" };
-        desColor2 = { background: "#FF10F0"};
-        desText2 = { color: "#FF10F0"}
-        
+        desColor2 = { background: "#FF10F0" };
+        desText2 = { color: "#FF10F0" }
+
     }
 
     return (
@@ -38,7 +39,7 @@ const Services = () => {
                     </div>
                     {/* Content */}
                     <div className="flex flex-col flex-1 text-center lg:items-start">
-                        <h1 className="mb-10 text-3xl text-neon-green">Design Services</h1>
+                        <Link to="services" className="mb-10 text-3xl text-neon-green">Design Services</Link>
                         <p className="my-4 text-center text-gray-400 lg:text-left md:text-center md:w-full sm:w-3/4">Blogs, Brochure, Banners, E book cover,
                             Instagram Posts, Facebook posts, Product packaging, Billboard, Kiosk, Leaflets</p>
                     </div>
@@ -56,18 +57,17 @@ const Services = () => {
                         </div>
                         {/* Content */}
                         <div className="flex flex-col flex-1 text-center lg:items-start">
-                            <h1 style={desText2} className="mb-10 text-3xl text-ECDBBA">Technical Writing &#38; Publications </h1>
+                            <Link to="writings" style={desText2} className="mb-10 text-3xl text-ECDBBA">Technical Writing &#38; Publications </Link>
                             <p className="my-4 text-center text-gray-400 lg:text-left md:text-center md:w-full sm:w-3/4">
                                 Be it assistance in Design works or academic related query.
                                 By outsourcing your design and paper publishing work to us, you can focus on what you do best running your business.
                             </p>
                         </div>
                         {/* Image design */}
-                        <div style= {desColor2} className="absolute right-0 hidden w-2/4 overflow-hidden rounded-l-full lg:right-0 lg:top-20 h-80 lg:block hover:transform">
+                        <div style={desColor2} className="absolute right-0 hidden w-2/4 overflow-hidden rounded-l-full lg:right-0 lg:top-20 h-80 lg:block hover:transform">
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     )

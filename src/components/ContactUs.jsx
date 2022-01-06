@@ -1,4 +1,4 @@
-import React,{ useContext } from 'react'
+import React, { useContext } from 'react'
 import { ThemeContext } from '../context/Context';
 
 const ContactUs = () => {
@@ -7,11 +7,11 @@ const ContactUs = () => {
 
     if (theme === "dark") {
         style = { background: "linear-gradient(168deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 0%, rgba(34,34,34,0.8970938717283788) 69%)", color: "white" };
-        inpText = { background: "#DCDCDC"};
+        inpText = { background: "#DCDCDC" };
     }
     else if (theme === "light") {
         style = { color: "black" };
-        inpText = {background: "DCDCDC"};
+        inpText = { background: "DCDCDC" };
     }
 
     return (
@@ -35,6 +35,22 @@ const ContactUs = () => {
                                 <input style={inpText} type="email" id="email" name="email" className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-400 rounded outline-none focus:border-indigo-600 focus:bg-white focus:ring-2 focus:ring-indigo-300" />
                             </div>
                         </div>
+                        <div className="w-1/2 p-2">
+                            <div className="relative">
+                                <label htmlFor="phone" className="text-sm leading-7">Phone No</label>
+                                <input style={inpText} type="text" id="phone" name="phone" className="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-400 rounded outline-none focus:border-indigo-600 focus:bg-white focus:ring-2 focus:ring-indigo-300" />
+                            </div>
+                        </div>
+                        <div className="w-1/2 p-2">
+                            <div className="relative">
+                                <label htmlFor="topic" className="text-sm leading-7">Choose the service</label>
+                                <select style={inpText} name="topic" className='w-full px-3 py-2 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-400 rounded outline-none focus:border-indigo-600 focus:bg-white focus:ring-2 focus:ring-indigo-300' id="topic">
+                                    <option value="design">Design</option>
+                                    <option value="writing">Writings</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div className="w-full p-2">
                             <div className="relative">
                                 <label htmlFor="message" className="text-sm leading-7">Message</label>

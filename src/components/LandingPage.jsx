@@ -29,12 +29,12 @@ const LandingPage = () => {
                 <div className="container flex flex-col-reverse items-center gap-12 lg:flex-row mt-14 lg:mt-28">
                     {/* Upper Content */}
                     <div className="flex flex-col items-center flex-1 lg:items-start">
-                        <h2 style={topic} className="mb-10 text-3xl text-center md:text-4 lg:text-5xl lg:text-left">
+                        <h2 style={topic} className="mb-10 text-3xl text-center font-bioRhyme md:text-4 lg:text-5xl lg:text-left">
                             Qbroz
                         </h2>
-                        <p style={desc} className="mb-10 text-center text-gray-400 text-l lg:text-left">
+                        <p style={desc} className="mb-10 text-center text-gray-400 font-mont text-l lg:text-left">
                         Every work is different so are the challenges. Our aim is to provide  solution that is tailored to each client’s writing as well as design needs.
-                        No matter the budget, we deliver only the best. We furnish full assistance in the academic ghost writing and publications to make you a virtuous
+                        No matter the budget, we deliver only the best.<br/><br/> We furnish full assistance in the academic ghost writing and publications to make you a virtuous
                         scientific author.   
 
                         </p>

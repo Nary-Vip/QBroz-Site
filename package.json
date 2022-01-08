@@ -1,5 +1,6 @@
 {
   "name": "qbroz-site",
+  "homepage": "http://Qbroz.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

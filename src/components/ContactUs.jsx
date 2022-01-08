@@ -19,7 +19,7 @@ const ContactUs = () => {
     function sendMail(e) {
         e.preventDefault();
 
-        emailjs.sendForm('service_0l8dkjd', 'template_zm9pzr8', form.current, 'user_7ZWaDPykZTFzDcI39mrh8')
+        emailjs.sendForm('service_5ah1x0m', 'template_kdt095j', form.current, 'user_30OVx8gnfv9B4iFdLb9GE')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {

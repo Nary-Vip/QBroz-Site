@@ -18,9 +18,9 @@ const WritingsIterator = () => {
   console.log(writings);
     return (
         <div>
-            <div className="container relative flex flex-col items-center h-screen">
+            <div className="container relative flex flex-col items-center">
 
-                <h1 className="py-4 text-3xl text-neon-green">Design Services</h1>
+                <h1 className="py-4 text-3xl text-neon-green">Technical Writing &#38; Publications </h1>
                 <div className="grid w-5/6 gap-4 my-5 h-4/6 md:grid-cols-2">
                     {writings.map((design) => (
                         <div style={desColor1}

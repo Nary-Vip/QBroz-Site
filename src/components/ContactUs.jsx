@@ -33,7 +33,7 @@ const ContactUs = () => {
     }
 
     return (
-        <section style={style} className="container relative h-screen my-10 border-2 border-gray-400 rounded-lg body-font">
+        <section style={style} className="container static my-10 border-2 border-gray-400 rounded-lg body-font">
             <form ref={form} onSubmit={sendMail}>
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col w-full mb-12 text-center">

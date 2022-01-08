@@ -23,15 +23,16 @@ function App() {
   let style;
 
     if (theme === "dark") {
-        style = { background: "#171717", color: "#dfd8fd" };
+        style = { background: "#171717", color: "#dfd8fd", transition:"0.3s ease-out" };
     }
     else if (theme === "light") {
-        style = { background: "white", color: "#666565" };
+        style = { background: "white", color: "#666565", transition:"0.3s ease-in" };
     }
 
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
     <Router>
+      <div>
       <div style = {style} className="relative flex flex-col min-h-screen">
         <Navbar />
         <Routes>
@@ -48,6 +49,8 @@ function App() {
           <Route path="*" element={<PageNotFound/>} />
 
         </Routes>
+        
+      </div>
         <Footer />
       </div>
     </Router>

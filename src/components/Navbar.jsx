@@ -7,8 +7,6 @@ import { ThemeContext } from '../context/Context';
 const Navbar = () => {
     const { setTheme } = useContext(ThemeContext);
     const [mmenu, setmmenu] = useState(false);
-    const [icon, seticon] = useState("w-1/6 h-2/6");
-    const [navName, setnavName] = useState("navName");
 
     const switchThemeToLight = () => {
         setTheme("light");
@@ -20,12 +18,6 @@ const Navbar = () => {
 
     function mobileMenu() {
         setmmenu(!mmenu);
-        if(mmenu === true){
-            setnavName("hidden");
-        }
-        else{
-            setnavName("");
-        }
     }
 
     return (
@@ -33,7 +25,7 @@ const Navbar = () => {
             <div className="container flex items-center py-4 mt-4 sm:mt-4">
                 {mmenu === true ? (
                     <div className="md:hidden">
-                        <div className="z-50 w-screen h-screen mobile-menu">
+                        <div className="z-50 w-screen h-full mobile-menu">
                             <ul className="text-center">
                                 <li className="active"><Link onClick={mobileMenu} to="/" className="block px-2 py-4 text-sm font-semibold text-white bg-yellow-400">Home</Link></li>
                                 <li><a href="#services" onClick={mobileMenu} className="block px-2 py-4 text-sm transition duration-300 hover:bg-yellow-400">Services</a></li>
@@ -46,19 +38,19 @@ const Navbar = () => {
                     <div></div>
                 )}
 
-                <div className={mmenu === false?("w-1/6 h-2/6"):("hidden")}>
+                <div className={mmenu === false?("h-2/6 w-2/6 md:w-1/6 md:h-2/6"):("h-2/6 w-2/6 md:w-1/6 md:h-2/6 sm:hidden")}>
                     <Link to="/"><img className="w-2/6 rounded-lg h-1/6" src={navIcon} alt="Icon"></img></Link>
 
                     {/* <FcGlobe className="text-3xl"/> */}
                 </div>
-                <div className={mmenu === false?("navName"):("hidden")}>
-                    <span className='text-3xl'>Q</span>broz
+                <div className={mmenu === false?("navName"):("navName sm:hidden")}>
+                    <span className='text-3xl'>Q</span>broz Design and Publishing Services 
                 </div>
 
-                <ul className="items-center justify-end flex-1 hidden gap-12 text-xs text-blue-400 uppercase sm:flex">
+                <ul className="items-center justify-end flex-1 hidden gap-12 text-xs font-bold text-blue-400 uppercase sm:flex">
                     <li className="cursor-pointer"><Link to="/about">About</Link></li>
                     <div className="dropdown">
-                        <button className="uppercase">Theme</button>
+                        <button className="font-bold uppercase">Theme</button>
                         <div className="dropdown-content">
                             <button onClick={switchThemeToLight}>Light</button>
                             <button onClick={switchThemeToDark}>Dark</button>

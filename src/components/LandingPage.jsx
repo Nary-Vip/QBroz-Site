@@ -1,6 +1,6 @@
 import React,{ useContext } from 'react'
 import { ThemeContext } from '../context/Context';
-import firstPic from "../Images/coverPic.jpg";
+import firstPic from "../Images/front-logo.png";
 import Services from './Services';
 
 const LandingPage = () => {
@@ -32,7 +32,7 @@ const LandingPage = () => {
                         <h2 style={topic} className="mb-10 text-3xl text-center font-bioRhyme md:text-4 lg:text-5xl lg:text-left">
                             Qbroz
                         </h2>
-                        <p style={desc} className="mb-10 text-center text-gray-400 font-mont text-l lg:text-left">
+                        <p style={desc} className="mb-10 text-lg text-center text-gray-400 font-mont lg:text-left">
                         Every work is different so are the challenges. Our aim is to provide  solution that is tailored to each client’s writing as well as design needs.
                         No matter the budget, we deliver only the best.<br/><br/> We furnish full assistance in the academic ghost writing and publications to make you a virtuous
                         scientific author.   
@@ -44,7 +44,7 @@ const LandingPage = () => {
                     </div>
                     {/* Image */}
                     <div className="z-10 flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0">
-                        <img className="w-5/6 pt-5 border-2 border-black border-solid rounded-md h-5/6 sm:w-3/4 sm:h-3/4 md:w-5/6 md:h-5/6" src={firstPic} alt="Cover PIC" />
+                        <img className="w-5/6 rounded-md h-5/6 sm:w-5/6 sm:h-5/6 md:w-5/6 md:h-5/6" src={firstPic} alt="Cover PIC" />
                     </div>
                 </div>
                 {/* Image design */}

@@ -37,7 +37,8 @@ module.exports = {
       pacifo: ["Sanchez, serif"],
       balo: ["'Baloo Bhaijaan 2', cursive"],
       bioRhyme: ["'BioRhyme', serif"],
-      mont: ["'Montserrat', sans-serif"]
+      mont: ["'Montserrat', sans-serif"],
+      lobster: ["'Vollkorn', serif"]
     }
   },
   variants: {

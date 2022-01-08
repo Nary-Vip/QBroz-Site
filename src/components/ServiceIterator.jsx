@@ -22,7 +22,7 @@ const ServiceIterator = () => {
       <div className="container relative flex flex-col items-center">
 
         <h1 className="py-4 text-3xl text-neon-green">Design Services</h1>
-        <div className="grid w-5/6 gap-4 my-5 h-4/6 md:grid-cols-2">
+        <div className="grid w-5/6 gap-4 my-5 border-2 border-black h-4/6 md:grid-cols-2">
           {designs.map((design) => (
             <div style={desColor1}
               className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "

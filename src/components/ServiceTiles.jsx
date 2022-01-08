@@ -7,11 +7,10 @@ const ServiceTiles = (props) => {
     
 
     return (
-        <div className='flex items-center p-2 space-x-6'>
+        <div className='flex items-center p-2 space-x-3'>
             <Icon className='w-12 h-12 text-green-500' />
-            <div>
+            <div className="w-full sm:text-center">
                 <h6 className='font-bold'>{title}</h6>
-                <p>Some blaw blaw</p>
             </div>
         </div>
     )

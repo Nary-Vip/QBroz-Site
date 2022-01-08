@@ -26,7 +26,7 @@ function App() {
         style = { background: "#171717", color: "#dfd8fd", transition:"0.3s ease-out" };
     }
     else if (theme === "light") {
-        style = { background: "white", color: "#666565", transition:"0.3s ease-in" };
+        style = { background: "white", color: "#666565", transition:"0.4s ease-in-out" };
     }
 
   return (

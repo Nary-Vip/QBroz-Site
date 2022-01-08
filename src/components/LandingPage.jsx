@@ -6,19 +6,13 @@ import Services from './Services';
 const LandingPage = () => {
 
     const { theme } = useContext(ThemeContext);
-    let desc, topic, desColor1, btnBg;
+    let desc;
 
     if (theme === "dark") {
         desc= { color: "#dcdcdc"};
-        topic = {color: "#E94560"};
-        desColor1 = { background: "#E94560"};
-        btnBg = {background: "#E94560"};
     }
     else if (theme === "light") {
         desc = {color: "#808080"};
-        topic = {color: "#DF00FE"};
-        desColor1 = { background: "#DF00FE"};
-        btnBg = { background: "#DF00FE"};
     }
 
 
@@ -29,7 +23,7 @@ const LandingPage = () => {
                 <div className="container flex flex-col-reverse items-center gap-12 lg:flex-row mt-14 lg:mt-28">
                     {/* Upper Content */}
                     <div className="flex flex-col items-center flex-1 lg:items-start">
-                        <h2 style={topic} className="mb-10 text-3xl text-center font-bioRhyme md:text-4 lg:text-5xl lg:text-left">
+                        <h2 className="mb-10 text-3xl text-center font-bioRhyme md:text-4 text-lightGB lg:text-5xl lg:text-left">
                             Qbroz
                         </h2>
                         <p style={desc} className="mb-10 text-lg text-center text-gray-400 font-mont lg:text-left">
@@ -39,16 +33,16 @@ const LandingPage = () => {
 
                         </p>
                         <div className="flex flex-wrap justify-center gap-6">
-                            <a style={btnBg} href="#services" className="btn btn-2 hover:text-gray-100">OUR SERVICES</a>
+                            <a href="#services" className="font-bold btn btn-2 bg-lightGB hover:text-gray-100">OUR SERVICES</a>
                         </div>
                     </div>
                     {/* Image */}
-                    <div className="z-10 flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0">
-                        <img className="w-5/6 rounded-md h-5/6 sm:w-5/6 sm:h-5/6 md:w-5/6 md:h-5/6" src={firstPic} alt="Cover PIC" />
+                    <div className="z-10 flex justify-center flex-1 mb-10 lg:justify-end md:mb-16 lg:mb-0">
+                        <img className="w-5/6 rounded-md h-5/6 sm:w-5/6 sm:h-5/6 md:w-5/6 md:h-full" src={firstPic} alt="Cover PIC" />
                     </div>
                 </div>
                 {/* Image design */}
-                <div style={desColor1} className="absolute right-0 hidden w-2/4 overflow-hidden rounded-l-full top-40 h-80 md:block lg:right-0">
+                <div className="absolute right-0 hidden w-2/4 overflow-hidden rounded-l-full bg-lightGB top-44 h-80 md:block lg:right-0">
                 </div>
             </section>
             <Services />

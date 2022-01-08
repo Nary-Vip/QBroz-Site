@@ -14,13 +14,13 @@ const About = () => {
     }
     else if (theme === "light") {
         style = { background: "white", color: "black" };
-        para = {color: "#a9a9a9"}
+        para = {color: "#797979"}
     }
 
     return (
         <div className="container relative grid min-h-screen px-10 py-5 lg:px-0 lg:py-0 place-items-center">
             <div style={style} className="w-full border-2 border-gray-300 rounded-lg lg:px-20">
-                <h1 className='py-10 text-3xl text-center text-pink-400 font-lobster lg:pt-10'>ABOUT US</h1>
+                <h1 className='py-10 text-3xl font-bold text-center text-pink-400 font-lobster lg:pt-10'>ABOUT US</h1>
                 {/* container flex flex-col-reverse items-center gap-12 lg:flex-row mt-14 lg:mt-28 */}
                 <div className='flex flex-col-reverse items-center justify-center gap-12 lg:flex-row my-14 lg:my-18'>
                     

@@ -11,7 +11,12 @@ module.exports = {
         "neon-dark-purple": "#BE00FE",
         "wpink": "rgba(255,204,226,1)",
         "darkRed": "#E94560",
-        "darkSkin": "#ECDBBA"
+        "darkSkin": "#ECDBBA",
+        "orangish": "#FC766AFF",
+        "oragish1": "#ff887d",
+        "bluish": "#5B84B1FF",
+        "green-blue":"#ADEFD1FF",
+        "lightGB": "#5dffb6"
       }
     },
     container: {

@@ -97,10 +97,10 @@
 
 .navName{
   color: #ffffff;
-  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  background: linear-gradient(to right, #63a4e0 0, white 10%, #5eb0fd 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 10s infinite linear;
+  animation: shine 6s infinite linear;
   animation-fill-mode: forwards;
   font-weight: 900;
   font-size: 24px;

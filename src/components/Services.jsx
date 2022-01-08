@@ -2,69 +2,87 @@ import React, { useContext } from 'react'
 import services1 from "../Images/writing-publishing.png";
 import services from "../Images/design-services.png";
 import { ThemeContext } from '../context/Context';
-import { Link } from 'react-router-dom';
+import ServiceTiles from './ServiceTiles';
+import { designs } from '../Services';
+import { writings } from '../Services';
 
 const Services = () => {
 
     const { theme } = useContext(ThemeContext);
     let style, desColor2, desText2;
+    let desColor1 = { background: "#E94560"};
 
     if (theme === "dark") {
         style = { background: "linear-gradient(168deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 0%, rgba(34,34,34,0.8970938717283788) 69%)", color: "white" };
         desColor2 = { background: "#ECDBBA" };
-        desText2 = { color: "#ECDBBA" }
+        desText2 = { color: "#ECDBBA" };
+        desColor1 = { color: "white", background: "black" };
     }
     else if (theme === "light") {
         style = { color: "black" };
-        desColor2 = { background: "#FF10F0" };
-        desText2 = { color: "#FF10F0" }
-
+        desColor2 = { background: "#7197c0" };
+        desText2 = { color: "#7197c0" };
+        desColor1 = { color: "black" };
     }
 
     return (
         <div style={style} className="pt-20 pb-40 mt-20 bg-gray-50 lg:mt-60" id="services">
-            <div className="px-2 mx-auto sm:w-3/4 lg:w-5/12">
+            {/* <div className="px-2 mx-auto sm:w-3/4 lg:w-5/12">
                 <h1 className="text-3xl text-center text-blue-400">OUR SERVICES</h1>
                 <p className="mt-4 text-center text-gray-400">We commit to give 100% quality services and customer support.</p>
-            </div>
+            </div> */}
 
-            <div className="relative mt-20 lg:mt-24">
+            <div className="relative mt-20 lg:mt-4">
                 {/* Service - Content */}
 
                 {/* Design */}
-                <div className="container flex flex-col items-center justify-center lg:flex-row gap-x-28">
+                <div className="container flex flex-col items-center justify-center lg:flex-row">
                     {/* IMage */}
-                    <div className="z-10 flex justify-center flex-1 mb-10 lg:mb-0">
-                        <img className="w-3/4 ml-0 border-2 border-black rounded-md h-3/4 lg:w-3/6 lg:h-3/6 md:w-full md:h-full" src={services} alt="Cover PIC" />
+                    <div className="z-10 flex justify-center flex-1 mb-10 lg:justify-start lg:mb-0">
+                        <img className="w-3/4 border-2 border-black rounded-md h-3/5 lg:w-3/6 lg:h-3/6 md:w-full md:h-full" src={services} alt="Cover PIC" />
                     </div>
                     {/* Content */}
-                    <div className="flex flex-col flex-1 text-center lg:items-start">
-                        <Link to="services" className="mb-10 text-3xl font-bold text-neon-green">Design Services</Link>
-                        <p className="my-4 text-center text-gray-400 lg:text-left md:text-center md:w-full sm:w-3/4">Blogs, Brochure, Banners, E book cover,
-                            Instagram Posts, Facebook posts, Product packaging, Billboard, Kiosk, Leaflets</p>
+                    <div className="flex flex-col flex-1 w-5/6 text-center lg:items-start">
+                        <div className="w-full mb-10 text-3xl font-bold text-center text-oragish1">Design Services</div>
+                        <div className="grid w-full gap-4 my-5 h-4/6 md:grid-cols-2">
+                            {designs.map((design) => (
+                                <div style={desColor1}
+                                    className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1"
+                                    key={design.title}
+                                >
+                                    <ServiceTiles service={design} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     {/* Image design */}
-                    <div className="absolute right-0 hidden w-2/4 overflow-hidden rounded-r-full bg-neon-green lg:left-0 lg:top-20 h-80 lg:block">
+                    <div className="absolute right-0 hidden w-2/5 overflow-hidden rounded-r-full bg-oragish1 lg:left-0 lg:top-52 h-80 lg:block">
                     </div>
                 </div>
 
                 {/* Writing */}
                 <div className="relative mt-20 lg:mt-52">
-                    <div className="container flex flex-col items-center justify-center lg:flex-row-reverse gap-x-24">
+                    <div className="container flex flex-col items-center justify-center lg:flex-row-reverse">
                         {/* IMage */}
-                        <div className="z-10 flex justify-center flex-1 mb-10 lg:mb-0">
-                            <img className="w-3/4 ml-0 border-2 border-black rounded-md lg:ml-20 h-3/4 lg:w-3/6 lg:h-3/6 md:w-full md:h-full" src={services1} alt="Cover PIC" />
+                        <div className="z-10 flex justify-center flex-1 mb-10 lg:justify-end lg:mb-0">
+                            <img className="w-3/4 border-2 border-black rounded-md lg:ml-20 h-3/5 lg:w-3/6 lg:h-3/6 md:w-full md:h-full" src={services1} alt="Cover PIC" />
                         </div>
                         {/* Content */}
-                        <div className="flex flex-col flex-1 text-center lg:items-start">
-                            <Link to="writings" style={desText2} className="mb-10 text-3xl font-bold text-ECDBBA">Technical Writing &#38; Publications </Link>
-                            <p className="my-4 text-center text-gray-400 lg:text-left md:text-center md:w-full sm:w-3/4">
-                                Be it assistance in Design works or academic related query.
-                                By outsourcing your design and paper publishing work to us, you can focus on what you do best running your business.
-                            </p>
+                        <div className="flex flex-col flex-1 w-5/6 text-center lg:items-start">
+                            <div style={desText2} className="w-full mb-10 text-3xl font-bold text-center text-bluish">Technical Writing &#38; Publications </div>
+                            <div className="grid w-full gap-4 my-5 h-4/6 md:grid-cols-2">
+                                {writings.map((design) => (
+                                    <div style={desColor1}
+                                        className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1"
+                                        key={design.title}
+                                    >
+                                        <ServiceTiles service={design} />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                         {/* Image design */}
-                        <div style={desColor2} className="absolute right-0 hidden w-2/4 overflow-hidden rounded-l-full lg:right-0 lg:top-20 h-80 lg:block hover:transform">
+                        <div style={desColor2} className="absolute right-0 hidden w-2/5 overflow-hidden rounded-l-full lg:right-0 lg:top-48 h-80 lg:block hover:transform">
                         </div>
                     </div>
                 </div>

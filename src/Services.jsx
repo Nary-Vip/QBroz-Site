@@ -87,11 +87,11 @@ export const writings = [
     },
     {
         "Icon": MdAssistant,
-        "title": "phD Assistance"
+        "title": "Ph.D. Assistance"
     },
     {
         "Icon": FaProjectDiagram,
-        "title": "Project Assitance"
+        "title": "Project Assistance"
     }
 
 ];

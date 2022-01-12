@@ -18,7 +18,11 @@ const ContactUs = () => {
 
     function sendMail(e) {
         e.preventDefault();
-
+        
+        if(form.name === "" || form.phone === "" || form.email ==="" || form.message === ""){
+            alert("Please fill all the details before sending.");
+        }
+        else{
         emailjs.sendForm('service_5ah1x0m', 'template_kdt095j', form.current, 'user_30OVx8gnfv9B4iFdLb9GE')
             .then((result) => {
                 console.log(result.text);
@@ -29,7 +33,8 @@ const ContactUs = () => {
         setTimeout(() => {
             e.target.reset();    
         }, 3000);
-        
+        alert("Your Feedback has been succesfully submitted.");
+    }
     }
 
     return (

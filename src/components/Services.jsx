@@ -39,7 +39,7 @@ const Services = () => {
                 <div className="container flex flex-col items-center justify-center lg:flex-row">
                     {/* IMage */}
                     <div className="z-10 flex justify-center flex-1 mb-10 lg:justify-start lg:mb-0">
-                        <img className="w-3/4 border-2 border-black rounded-md h-3/5 lg:w-3/6 lg:h-3/6 md:w-full md:h-full" src={services} alt="Cover PIC" />
+                        <img className="w-3/4 border-2 border-black rounded-md md:w-3/5 h-3/5 lg:w-3/6 lg:h-3/6" src={services} alt="Cover PIC" />
                     </div>
                     {/* Content */}
                     <div className="flex flex-col flex-1 w-5/6 text-center lg:items-start">
@@ -65,7 +65,7 @@ const Services = () => {
                     <div className="container flex flex-col items-center justify-center lg:flex-row-reverse">
                         {/* IMage */}
                         <div className="z-10 flex justify-center flex-1 mb-10 lg:justify-end lg:mb-0">
-                            <img className="w-3/4 border-2 border-black rounded-md lg:ml-20 h-3/5 lg:w-3/6 lg:h-3/6 md:w-full md:h-full" src={services1} alt="Cover PIC" />
+                            <img className="w-3/4 border-2 border-black rounded-md md:w-3/5 lg:ml-20 h-3/5 lg:w-3/6 lg:h-3/6" src={services1} alt="Cover PIC" />
                         </div>
                         {/* Content */}
                         <div className="flex flex-col flex-1 w-5/6 text-center lg:items-start">

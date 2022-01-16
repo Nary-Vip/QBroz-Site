@@ -12,8 +12,6 @@ import About from './components/About';
 import PageNotFound from './components/PageNotFound';
 import { ThemeContext } from './context/Context';
 import ContactUs from './components/ContactUs';
-import ServiceIterator from './components/ServiceIterator';
-import WritingsIterator from "./components/WritingsIterator";
 import { Helmet } from 'react-helmet';
 
 
@@ -49,10 +47,6 @@ function App() {
           <Route exact path="/about" element={<About/>}/>
 
           <Route path="/contactus" element={<ContactUs/>}/>
-
-          <Route path="/services" element={<ServiceIterator/>}/>
-
-          <Route path="/writings" element={<WritingsIterator/>}/>
 
           <Route path="*" element={<PageNotFound/>} />
 

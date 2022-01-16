@@ -27,11 +27,6 @@ const Services = () => {
 
     return (
         <div style={style} className="pt-20 pb-40 mt-20 bg-gray-50 lg:mt-60" id="services">
-            {/* <div className="px-2 mx-auto sm:w-3/4 lg:w-5/12">
-                <h1 className="text-3xl text-center text-blue-400">OUR SERVICES</h1>
-                <p className="mt-4 text-center text-gray-400">We commit to give 100% quality services and customer support.</p>
-            </div> */}
-
             <div className="relative mt-20 lg:mt-4">
                 {/* Service - Content */}
 

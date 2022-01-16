@@ -14,6 +14,7 @@ import { ThemeContext } from './context/Context';
 import ContactUs from './components/ContactUs';
 import ServiceIterator from './components/ServiceIterator';
 import WritingsIterator from "./components/WritingsIterator";
+import { Helmet } from 'react-helmet';
 
 
 function App() {
@@ -35,6 +36,13 @@ function App() {
       <div>
       <div style = {style} className="relative flex flex-col min-h-screen">
         <Navbar />
+        
+        <Helmet>
+          <title>Qbroz Design and Publishing Services</title>
+          <meta name="description" content="Qbroz design and publishing services, which primarily works on Blogs, Brouchures, Banners, EBook Covers, Instagram Posts, FaceBook Posts, Product Packaging, Billboard, Kiosk, Leaflets, Academic Writing, Scientific Research Writing, Book Writing and publications, Data Analysis, Research Implementation, Bussiness Application, Journal Publishing, Presentations, Resume Designs, Ph.D.Assistance, Project Assistance"/>
+          <meta name="keywords" content="Blogs, Brouchures, Banners, EBook Covers, Instagram Posts, FaceBook Posts, Product Packaging, Billboard, Kiosk, Leaflets, Academic Writing, Scientific Research Writing, Book Writing and publications, Data Analysis, Research Implementation, Bussiness Application, Journal Publishing, Presentations, Resume Designs, Ph.D.Assistance, Project Assistance"/>
+        </Helmet>
+        
         <Routes>
           <Route exact path="/" element={<LandingPage />}/>
 

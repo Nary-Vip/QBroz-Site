@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../context/Context';
-// import aboutPic from "../Images/about.jpg";
 import corPic from "../Images/project-managemnt.png";
+import { Helmet } from 'react-helmet';
 
 const About = () => {
     const { theme } = useContext(ThemeContext);
@@ -19,6 +19,11 @@ const About = () => {
 
     return (
         <div className="container relative grid min-h-screen px-10 py-5 lg:px-0 lg:py-0 place-items-center">
+        <Helmet>
+          <title>Qbroz - About US</title>
+          <meta name="description" content="About our Qbroz design and publishing services and it's working culture."/>
+          <meta name="keywords" content="Blogs, Brouchures, Banners, EBook Covers, Instagram Posts, FaceBook Posts, Product Packaging, Billboard, Kiosk, Leaflets, Academic Writing, Scientific Research Writing, Book Writing and publications, Data Analysis, Research Implementation, Bussiness Application, Journal Publishing, Presentations, Resume Designs, Ph.D.Assistance, Project Assistance"/>
+        </Helmet>
             <div style={style} className="w-full border-2 border-gray-300 rounded-lg lg:px-20">
                 <h1 className='py-10 text-3xl font-bold text-center text-pink-400 font-lobster lg:pt-10'>ABOUT US</h1>
                 {/* container flex flex-col-reverse items-center gap-12 lg:flex-row mt-14 lg:mt-28 */}

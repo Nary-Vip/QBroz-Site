@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from 'react'
 import { ThemeContext } from '../context/Context';
 import emailjs from '@emailjs/browser';
+import { Helmet } from 'react-helmet';
 
 const ContactUs = () => {
     const form = useRef();
@@ -18,7 +19,6 @@ const ContactUs = () => {
 
     function sendMail(e) {
         e.preventDefault();
-        
         if(form.name === "" || form.phone === "" || form.email ==="" || form.message === ""){
             alert("Please fill all the details before sending.");
         }
@@ -39,6 +39,11 @@ const ContactUs = () => {
 
     return (
         <section style={style} className="container static my-10 border-2 border-gray-400 rounded-lg body-font">
+        <Helmet>
+          <title>Qbroz - Contact US</title>
+          <meta name="description" content="Contact our Qbroz team for any queries and doubts."/>
+          <meta name="keywords" content="Blogs, Brouchures, Banners, EBook Covers, Instagram Posts, FaceBook Posts, Product Packaging, Billboard, Kiosk, Leaflets, Academic Writing, Scientific Research Writing, Book Writing and publications, Data Analysis, Research Implementation, Bussiness Application, Journal Publishing, Presentations, Resume Designs, Ph.D.Assistance, Project Assistance"/>
+        </Helmet>
             <form ref={form} onSubmit={sendMail}>
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col w-full mb-12 text-center">

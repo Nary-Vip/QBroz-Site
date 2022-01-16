@@ -16,6 +16,7 @@ const ServiceIterator = () => {
         desColor1 = { color: "black" };
     }
 
+
   console.log(designs);
   return (
     <div>
@@ -25,22 +26,15 @@ const ServiceIterator = () => {
         <div className="grid w-5/6 gap-4 my-5 border-2 border-black h-4/6 md:grid-cols-2">
           {designs.map((design) => (
             <div style={desColor1}
-              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
+              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1"
               key={design.title}
             >
-              <ServiceTiles service={design} />
+              <ServiceTiles service={design}/>
             </div>
           ))}
         </div>
 
       </div>
-      {/* <div className="w-1/6 h-1/6">
-        <img className="absolute hidden w-1/6 lg:rotate-45 12 h-1/6 lg:block lg:top-80 lg:left-10" src={bgimg} alt="Img"/>
-      </div>
-
-      <div className="w-1/6 h-1/6">
-        <img className="absolute hidden w-1/6 lg:rotate-12 h-1/6 lg:block lg:top-80 lg:right-10" src={bgimg1} alt="Img"/>
-      </div> */}
     </div>
   )
 }

@@ -122,3 +122,30 @@
   .dropdown:hover .dropdown-menu {
     display: block;
   }
+
+/*service tiles animation*/
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+  
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 0.8s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px); 
+    opacity: 0;
+  }
+  50%{
+    transform: translateY(50px) translateX(20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
